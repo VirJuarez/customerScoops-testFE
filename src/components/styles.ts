@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const StyledButton = styled.button`
   padding: 0.6rem;
@@ -11,24 +11,22 @@ export const StyledButton = styled.button`
   height: 35px;
   font-size: 14px;
 
-  
   &.primary {
     background-color: #231331;
     color: white;
 
     &:disabled {
-    background-color: #f0f0f0;
-    color: #cccccc; 
-    border: 1px solid #f0f0f0;
+      background-color: #f0f0f0;
+      color: #cccccc;
+      border: 1px solid #f0f0f0;
     }
   }
-  
+
   &.outline {
     background-color: transparent;
     border: 1px solid #231331;
     color: #231331;
   }
-
 `;
 
 export const StyledButtonText = styled.button`
@@ -43,19 +41,17 @@ export const StyledButtonText = styled.button`
   height: 35px;
   font-size: 14px;
 
-  
-  
   &.primary {
     background-color: #231331;
     color: white;
 
     &:disabled {
-    background-color: #f0f0f0;
-    color: #cccccc; 
-    border: 1px solid #f0f0f0;
+      background-color: #f0f0f0;
+      color: #cccccc;
+      border: 1px solid #f0f0f0;
     }
   }
-  
+
   &.outline {
     background-color: transparent;
     border: 1px solid #231331;
@@ -63,7 +59,7 @@ export const StyledButtonText = styled.button`
   }
 
   svg {
-    color: #13847B;
+    color: #13847b;
   }
 `;
 
@@ -72,11 +68,11 @@ export const StyledInput = styled.input`
   width: 80%;
   border: none;
   border-bottom: 1px solid #231331;
-  font-family: 'SF Pro', sans-serif;
+  font-family: "SF Pro", sans-serif;
   background-color: transparent;
 
   &::placeholder {
-    font-family: 'SF Pro', sans-serif;
+    font-family: "SF Pro", sans-serif;
     font-size: 17px;
     font-weight: 110;
     line-height: 20.29px;
@@ -92,7 +88,7 @@ export const StyledInput = styled.input`
 
 export const StyledLabel = styled.label`
   display: block;
-  font-family: 'K2D', sans-serif !important ;
+  font-family: "K2D", sans-serif !important ;
   font-size: 19px;
   font-weight: 300;
   line-height: 24.7px;
@@ -104,9 +100,9 @@ export const StyledContainer = styled.div<{ isFinalStepXl: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: start;
-  background-color: ${props => props.isFinalStepXl ? '#00CCBC' : '#F4F4F4'};
+  background-color: ${(props) => (props.isFinalStepXl ? "#00CCBC" : "#F4F4F4")};
   min-height: 100vh;
-  position: ${props => props.isFinalStepXl ? 'relative' : 'static'};
+  position: ${(props) => (props.isFinalStepXl ? "relative" : "static")};
 
   @media (min-width: 769px) {
     flex-direction: row;
@@ -122,7 +118,6 @@ export const StyledContentColumn = styled.div`
 
 export const StyledImageColumn = styled.div`
   display: none;
-  
 
   @media (min-width: 769px) {
     display: block;
@@ -132,17 +127,17 @@ export const StyledImageColumn = styled.div`
 `;
 
 export const StyledImage = styled.img`
-  height: 100%;         
-  width: auto;              
-  object-fit: cover;  
+  height: 100%;
+  width: auto;
+  object-fit: cover;
   position: absolute;
-  top:0;
-  right:0     
-  `;
+  top: 0;
+  right: 0;
+`;
 
 export const StyledImageMobile = styled.img`
   margin-left: 10px;
-  width:100%;
+  width: 100%;
   height: auto;
   object-fit: cover;
 `;
@@ -153,7 +148,6 @@ export const StyledMobileHeader = styled.div`
     display: none;
   }
 `;
-
 
 export const StyledCard = styled.div`
   display: flex;
@@ -173,9 +167,8 @@ export const StyledCardHeader = styled.div`
   background-size: cover;
   background-position: center;
   margin-left: 10px;
-  height: 213px
+  height: 213px;
 `;
-
 
 export const StyledCardTitle = styled.h2`
   font-size: 1.25rem;
@@ -185,17 +178,16 @@ export const StyledCardTitle = styled.h2`
 export const StyledCardContent = styled.div`
   margin: 2.18rem;
   @media (min-width: 769px) {
-  width: 70%;
-  margin:auto
-}
-
+    width: 70%;
+    margin: auto;
+  }
 `;
 
 export const StyledCardFooter = styled.div`
-  margin-top:2.18rem;
-  margin-bottom:2.18rem;
+  margin-top: 2.18rem;
+  margin-bottom: 2.18rem;
   display: flex;
-  gap:4px
+  gap: 4px;
 `;
 
 export const MapContainer = styled.div<{ isOdd: boolean }>`
@@ -231,10 +223,7 @@ export const MapItem = styled.div`
   border-radius: 8px;
 `;
 
-
-
 export const StyledOption = styled.div`
-  padding: auto;
   border-radius: 1.25rem;
   font-weight: 400;
   cursor: pointer;
@@ -243,14 +232,13 @@ export const StyledOption = styled.div`
   justify-content: center;
   line-height: 13.13px;
   font-size: 11px;
-  height:39px;
-  
-  
+  height: 39px;
+
   &.primary {
     background-color: #231331;
     color: white;
   }
-  
+
   &.outline {
     background-color: transparent;
     border: 1px solid #231331;
@@ -267,7 +255,7 @@ export const IdBadge = styled.span`
   height: 24px;
   border-radius: 1.25rem;
   font-weight: 500;
-  background-color: #00CCBC;
+  background-color: #00ccbc;
   color: white;
   flex-shrink: 0;
   padding: 0.2rem;
@@ -278,19 +266,19 @@ export const OptionButton = styled.button`
   align-items: center;
   gap: 12px;
   width: 100%;
-  padding: auto;
+  padding: 0.1rem 0.2rem; 
   border-radius: 1.25rem;
   font-weight: 400;
   cursor: pointer;
   line-height: 13.13px;
   font-size: 11px;
-  height:39px;
+  height: 39px;
 
   &.primary {
     background-color: #231331;
     color: white;
   }
-  
+
   &.outline {
     background-color: transparent;
     border: 1px solid #231331;
@@ -301,18 +289,19 @@ export const OptionButton = styled.button`
 export const ProgressBar = styled.div`
   width: 100%;
   height: 4px;
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
 
-@media (min-width: 769px) {
-  height:8px;
-}
-`
+  @media (min-width: 769px) {
+    height: 8px;
+  }
+`;
 
 export const ProgressFill = styled.div<{ progress: number }>`
-  width: ${props => props.progress}%;
+  width: ${(props) => props.progress}%;
   height: 100%;
   background-color: #231331;
-  transition: width 0.3s ease-in-out;`
+  transition: width 0.3s ease-in-out;
+`;
 
 export const StepsCount = styled.p`
   position: absolute;
@@ -323,22 +312,22 @@ export const StepsCount = styled.p`
   align-items: flex-start;
   margin: 0;
   padding: 0;
-  
+
   /* Estilo para el primer número y la barra */
   & > span:first-child {
     font-weight: 590;
     line-height: 1;
     font-size: 18px;
-    margin-right: 4px;  /* Espacio entre el primer número y la barra */
+    margin-right: 4px; /* Espacio entre el primer número y la barra */
   }
-  
+
   /* Estilo para la barra vertical */
   & > span.separator {
     font-size: 18px;
     line-height: 1;
-    margin: 0 4px;  /* Espacio a ambos lados de la barra */
+    margin: 0 4px; /* Espacio a ambos lados de la barra */
   }
-  
+
   /* Estilo para el número total */
   & > span:last-child {
     font-size: 10px;
@@ -349,6 +338,5 @@ export const StepsCount = styled.p`
 `;
 
 export const StyledLogo = styled.img`
-margin-bottom: 2.18rem;
-`
-
+  margin-bottom: 2.18rem;
+`;

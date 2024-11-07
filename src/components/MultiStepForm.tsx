@@ -1,7 +1,14 @@
-import { Step1, Step2, Step3, Step4, Step5, Step6 } from '../components/form-steps'
-import { useFormLogic } from '../hooks/useFormLogic'
-import useMediaQuery from '../hooks/mediaQuery'
-import { IoArrowBack, IoArrowForward } from "react-icons/io5"
+import {
+  Step1,
+  Step2,
+  Step3,
+  Step4,
+  Step5,
+  Step6,
+} from "./form-steps";
+import { useFormLogic } from "../hooks/useFormLogic";
+import useMediaQuery from "../hooks/mediaQuery";
+import { IoArrowBack, IoArrowForward } from "react-icons/io5";
 import {
   StyledButton,
   StyledCardContent,
@@ -17,12 +24,12 @@ import {
   ProgressFill,
   StepsCount,
   StyledLogo,
-  StyledButtonText
-} from '../components/styles'
+  StyledButtonText,
+} from "./styles";
 
 export default function MultiStepForm() {
-  const isMobile = useMediaQuery("(max-width: 768px)")
-  const totalSteps = 6
+  const isMobile = useMediaQuery("(max-width: 768px)");
+  const totalSteps = 6;
   const {
     step,
     formData,
@@ -30,32 +37,39 @@ export default function MultiStepForm() {
     handleInputChange,
     nextStep,
     prevStep,
-    isNextButtonEnabled
-  } = useFormLogic(totalSteps)
+    isNextButtonEnabled,
+  } = useFormLogic(totalSteps);
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     if (step === totalSteps) {
-      window.location.href = 'https://www.customerscoops.com/'
+      window.location.href = "https://www.customerscoops.com/";
     }
-  }
+  };
 
   const renderStepContent = () => {
-    const stepProps = { formData, handleInputChange, setFormData }
-    
-    switch(step) {
-      case 1: return <Step1 {...stepProps} />
-      case 2: return <Step2 {...stepProps} />
-      case 3: return <Step3 {...stepProps} />
-      case 4: return <Step4 {...stepProps} />
-      case 5: return <Step5 {...stepProps} />
-      case 6: return <Step6 />
-      default: return null
+    const stepProps = { formData, handleInputChange, setFormData };
+
+    switch (step) {
+      case 1:
+        return <Step1 {...stepProps} />;
+      case 2:
+        return <Step2 {...stepProps} />;
+      case 3:
+        return <Step3 {...stepProps} />;
+      case 4:
+        return <Step4 {...stepProps} />;
+      case 5:
+        return <Step5 {...stepProps} />;
+      case 6:
+        return <Step6 />;
+      default:
+        return null;
     }
-  }
+  };
 
   return (
-    <div className='max-w-screen max-h-screen'>
+    <div className="max-w-screen max-h-screen">
       <ProgressBar>
         <ProgressFill progress={(step - 1) * 20} />
       </ProgressBar>
@@ -65,14 +79,14 @@ export default function MultiStepForm() {
             <StyledMobileHeader>
               <StyledImageMobile src="/mobile-image.png" alt="Header Image" />
               <StepsCount>
-                <span>{step.toString().padStart(2, '0')}</span>
+                <span>{step.toString().padStart(2, "0")}</span>
                 <span className="separator">|</span>
-                <span>{totalSteps.toString().padStart(2, '0')}</span>
+                <span>{totalSteps.toString().padStart(2, "0")}</span>
               </StepsCount>
             </StyledMobileHeader>
             <StyledCardContent>
-              {!isMobile && <StyledLogo src="/logo.png"/>}
-              <form onSubmit={e => e.preventDefault()}>
+              {!isMobile && <StyledLogo src="/logo.png" />}
+              <form onSubmit={(e) => e.preventDefault()}>
                 {renderStepContent()}
               </form>
               <StyledCardFooter>
@@ -82,13 +96,13 @@ export default function MultiStepForm() {
                   </StyledButton>
                 )}
                 {step < totalSteps ? (
-                  <StyledButtonText 
-                    onClick={nextStep} 
-                    className="primary" 
+                  <StyledButtonText
+                    onClick={nextStep}
+                    className="primary"
                     disabled={!isNextButtonEnabled()}
                   >
                     {step === 1 ? "Comenzar" : "Siguiente"}
-                    {step === 1 ? null : <IoArrowForward size={16} />}
+                    {step !== 1 && !isMobile ? <IoArrowForward size={16} />: null}
                   </StyledButtonText>
                 ) : (
                   <StyledButtonText onClick={handleSubmit} className="primary">
@@ -103,13 +117,13 @@ export default function MultiStepForm() {
           <StyledImageColumn>
             <StyledImage src="/laptop-image.png" alt="Step Image" />
             <StepsCount>
-              <span>{step.toString().padStart(2, '0')}</span>
+              <span>{step.toString().padStart(2, "0")}</span>
               <span className="separator">|</span>
-              <span>{totalSteps.toString().padStart(2, '0')}</span>
+              <span>{totalSteps.toString().padStart(2, "0")}</span>
             </StepsCount>
           </StyledImageColumn>
         )}
       </StyledContainer>
     </div>
-  )
+  );
 }
