@@ -2,7 +2,7 @@
 
 ## 🚀 Demo
 
-Visita nuestra aplicación en vivo: [Customer Scoops Form](https://customer-scoops-form.vercel.app/)
+Visita el formulario en vivo: [Customer Scoops Form](https://customer-scoops-form.vercel.app/)
 
 ## 📋 Descripción
 
