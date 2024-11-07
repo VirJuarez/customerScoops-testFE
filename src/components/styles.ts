@@ -129,6 +129,7 @@ export const StyledImageColumn = styled.div`
 export const StyledImage = styled.img`
   height: 100%;
   width: auto;
+  max-width: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
