@@ -118,7 +118,6 @@ export const StyledContentColumn = styled.div`
   min-width: 50vw;
   display: flex;
   justify-content: center;
-  min-height: 100vh;
 `;
 
 export const StyledImageColumn = styled.div`
@@ -133,10 +132,12 @@ export const StyledImageColumn = styled.div`
 `;
 
 export const StyledImage = styled.img`
-  min-height: 100vh;            /* Hace que la imagen ocupe todo el alto de la pantalla */
-  max-width: 100%;          /* Limita el ancho máximo al 50% de la pantalla */
-  width: auto;              /* Mantiene la relación de aspecto */
-  object-fit: cover;        /* Asegura que la imagen cubra el área sin distorsionarse */
+  height: 100%;         
+  width: auto;              
+  object-fit: cover;  
+  position: absolute;
+  top:0;
+  right:0     
   `;
 
 export const StyledImageMobile = styled.img`
@@ -175,11 +176,6 @@ export const StyledCardHeader = styled.div`
   height: 213px
 `;
 
-// export const StyledCardImage = styled.div`
-//   background-image: url(/mobile-image.png);
-//   background-size: cover;
-//   background-position: center;
-// `;
 
 export const StyledCardTitle = styled.h2`
   font-size: 1.25rem;

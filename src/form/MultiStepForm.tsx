@@ -55,7 +55,7 @@ export default function MultiStepForm() {
   }
 
   return (
-    <div className='max-w-screen'>
+    <div className='max-w-screen max-h-screen'>
       <ProgressBar>
         <ProgressFill progress={(step - 1) * 20} />
       </ProgressBar>
