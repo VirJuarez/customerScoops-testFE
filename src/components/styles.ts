@@ -155,12 +155,6 @@ export const StyledCard = styled.div`
   flex-direction: column;
   flex: 1;
   min-height: 100vh;
-
-  @media (min-width: 769px) {
-    width: 50%;
-    margin: auto;
-    min-height: auto;
-  }
 `;
 
 export const StyledCardHeader = styled.div`
@@ -179,7 +173,7 @@ export const StyledCardTitle = styled.h2`
 export const StyledCardContent = styled.div`
   margin: 2.18rem;
   @media (min-width: 769px) {
-    width: 70%;
+    width: 60%;
     margin: auto;
   }
 `;
